@@ -9,9 +9,9 @@ LABEL license "MIT license"
 
 WORKDIR /tmp
 RUN git clone --depth 1 https://github.com/microsoft/binskim.git
-RUN mkdir /tmp/binary
-RUN dotnet publish --configuration Release --framework netcoreapp2.0 --runtime linux-x64 --output /tmp/binary /tmp/binskim/src/BinSkim.Driver/BinSkim.Driver.csproj
-RUN chmod +x /tmp/binary/BinSkim
+RUN mkdir /tmp/binary \
+    && dotnet publish --configuration Release --framework netcoreapp2.0 --runtime linux-x64 --output /tmp/binary /tmp/binskim/src/BinSkim.Driver/BinSkim.Driver.csproj \
+    && chmod +x /tmp/binary/BinSkim
 
 FROM ubuntu:20.04
 
