@@ -7,16 +7,18 @@ LABEL vendor "Safran Data Systems"
 LABEL description "Ubuntu 19.10 image, with Frama-C Calcium (20.0)"
 LABEL license "MIT license"
 
-RUN sed -i 's/# deb-src/deb-src/g' /etc/apt/sources.list && \
-apt update && \
-apt-get build-dep frama-c -y && \
-apt install wget libyojson-ocaml-dev libwhy3-ocaml-dev -y
+RUN sed -i 's/# deb-src/deb-src/g' /etc/apt/sources.list
+RUN apt update
+RUN apt-get build-dep frama-c -y
+RUN apt install wget libyojson-ocaml-dev libwhy3-ocaml-dev -y
 
 WORKDIR /tmp
-RUN wget https://frama-c.com/download/frama-c-20.0-Calcium.tar.gz && tar -xf frama-c-20.0-Calcium.tar.gz
+RUN wget https://frama-c.com/download/frama-c-20.0-Calcium.tar.gz
+RUN tar -xf frama-c-20.0-Calcium.tar.gz
 
 WORKDIR /tmp/frama-c-20.0-Calcium
-RUN CFLAGS="-static" LDFLAGS="-static" ./configure --disable-gui && make
+RUN CFLAGS="-static" LDFLAGS="-static" ./configure --disable-gui
+RUN make
 
 FROM ubuntu:19.10
 COPY --from=builder /tmp/frama-c-20.0-Calcium/ /tmp/frama-c-20.0-Calcium/
