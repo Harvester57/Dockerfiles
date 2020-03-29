@@ -3,7 +3,6 @@ FROM ubuntu:19.10 as builder
 LABEL maintainer "florian.stosse@safrangroup.com"
 LABEL lastupdate "18-03-2020"
 LABEL author "Florian Stosse"
-LABEL vendor "Safran Data Systems"
 LABEL description "Ubuntu 19.10 image, with Frama-C Calcium (20.0)"
 LABEL license "MIT license"
 
