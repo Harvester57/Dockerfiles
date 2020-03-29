@@ -1,7 +1,7 @@
 FROM ubuntu:19.10
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate '26-03-2020'
+LABEL lastupdate "29-03-2020"
 LABEL author "Florian Stosse"
 LABEL description "LLVM 9.0.0, using Ubuntu 19.10 base image"
 LABEL license "MIT license"
