@@ -27,4 +27,5 @@ RUN \
     apt update && \
     apt install ocaml-findlib make libocamlgraph-ocaml-dev libzarith-ocaml libyojson-ocaml libwhy3-ocaml-dev -y && \
     make install && \
-    rm -rf /tmp/frama-c-20.0-Calcium/
+    rm -rf /tmp/frama-c-20.0-Calcium/ && \
+    apt-get clean
