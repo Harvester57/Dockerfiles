@@ -2,7 +2,7 @@ FROM mcr.microsoft.com/windows/servercore:ltsc2016 AS builder
 SHELL ["cmd", "/S", "/C"]
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate '21-02-2020'
+LABEL lastupdate "21-02-2020"
 LABEL author "Florian Stosse"
 LABEL description "Windows 10 LTSC 2016 image, with Microsoft Build Tools 2017 (v15.0)"
 LABEL license "MIT license"
