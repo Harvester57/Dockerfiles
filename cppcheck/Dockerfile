@@ -21,6 +21,6 @@ RUN	\
 	make install FILESDIR=/cfg HAVE_RULES=yes CXXFLAGS="-O2 -DNDEBUG --static" -j `getconf _NPROCESSORS_ONLN` && \
 	strip /usr/bin/cppcheck
 
-FROM alpine:3.11.5
+FROM alpine:3.11
 
 COPY --from=builder /usr/bin/cppcheck /usr/bin/cppcheck
