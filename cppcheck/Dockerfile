@@ -1,24 +1,21 @@
 FROM alpine:3.11 AS builder
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "16-04-2020"
+LABEL lastupdate "10-05-2020"
 LABEL author "Florian Stosse"
-LABEL description "CppCheck v1.90, built using latest Alpine image"
+LABEL description "CppCheck v2.0, built using latest Alpine image"
 LABEL license "MIT license"
 
-RUN \
-	apk add --no-cache -t .required_apks git make g++ pcre-dev && \
+RUN apk add --no-cache -t .required_apks git make g++ pcre-dev && \
 	mkdir -p /usr/src /src
 
 WORKDIR /usr/src
 
-RUN	git clone https://github.com/danmar/cppcheck.git
+RUN	git clone --branch 2.0 https://github.com/danmar/cppcheck.git --depth 1
 
 WORKDIR /usr/src/cppcheck
 
-RUN	\
-	git checkout 1.90 && \
-	make install FILESDIR=/cfg HAVE_RULES=yes CXXFLAGS="-O2 -DNDEBUG --static" -j `getconf _NPROCESSORS_ONLN` && \
+RUN	make install FILESDIR=/cfg HAVE_RULES=yes CXXFLAGS="-O3 -DNDEBUG --static" -j2 && \
 	strip /usr/bin/cppcheck
 
 FROM alpine:3.11
