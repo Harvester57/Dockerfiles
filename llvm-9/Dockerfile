@@ -3,7 +3,7 @@ FROM ubuntu:20.04
 LABEL maintainer "florian.stosse@safrangroup.com"
 LABEL lastupdate "29-03-2020"
 LABEL author "Florian Stosse"
-LABEL description "LLVM 9.0.0, using Ubuntu 19.10 base image"
+LABEL description "LLVM 9.0.0, using Ubuntu 20.04 base image"
 LABEL license "MIT license"
 
 RUN \

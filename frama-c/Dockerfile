@@ -3,7 +3,7 @@ FROM ubuntu:20.04 as builder
 LABEL maintainer "florian.stosse@safrangroup.com"
 LABEL lastupdate "18-03-2020"
 LABEL author "Florian Stosse"
-LABEL description "Ubuntu 19.10 image, with Frama-C Calcium (20.0)"
+LABEL description "Ubuntu 20.04 image, with Frama-C Calcium (20.0)"
 LABEL license "MIT license"
 
 RUN sed -i 's/# deb-src/deb-src/g' /etc/apt/sources.list

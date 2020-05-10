@@ -4,7 +4,7 @@ FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS builder
 LABEL maintainer "florian.stosse@safrangroup.com"
 LABEL lastupdate "29-03-2020"
 LABEL author "Florian Stosse"
-LABEL description "Ubuntu 19.10 image, with BinSkim 1.6.0"
+LABEL description "Ubuntu 20.04 image, with BinSkim 1.6.0"
 LABEL license "MIT license"
 
 WORKDIR /tmp
