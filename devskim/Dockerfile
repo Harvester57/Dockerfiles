@@ -1,9 +1,9 @@
-FROM ubuntu:19.10
+FROM ubuntu:20.04
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "16-04-2020"
+LABEL lastupdate "10-05-2020"
 LABEL author "Florian Stosse"
-LABEL description "DevSkim tool v0.4.119 using Ubuntu 19.10 base image"
+LABEL description "DevSkim tool v0.4.132 using Ubuntu 19.10 base image"
 LABEL license "MIT license"
 
 # Cf. https://github.com/microsoft/DevSkim/releases

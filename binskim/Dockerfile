@@ -13,7 +13,7 @@ RUN mkdir /tmp/binary \
     && dotnet publish --configuration Release --framework netcoreapp2.0 --runtime linux-x64 --output /tmp/binary /tmp/binskim/src/BinSkim.Driver/BinSkim.Driver.csproj \
     && chmod +x /tmp/binary/BinSkim
 
-FROM ubuntu:19.10
+FROM ubuntu:20.04
 
 COPY --from=builder /tmp/binary /usr/share/binskim
 

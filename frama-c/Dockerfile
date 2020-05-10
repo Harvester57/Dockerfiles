@@ -1,4 +1,4 @@
-FROM ubuntu:19.10 as builder
+FROM ubuntu:20.04 as builder
 
 LABEL maintainer "florian.stosse@safrangroup.com"
 LABEL lastupdate "18-03-2020"
@@ -19,7 +19,7 @@ WORKDIR /tmp/frama-c-20.0-Calcium
 RUN CFLAGS="-static" LDFLAGS="-static" ./configure --disable-gui
 RUN make
 
-FROM ubuntu:19.10
+FROM ubuntu:20.04
 COPY --from=builder /tmp/frama-c-20.0-Calcium/ /tmp/frama-c-20.0-Calcium/
 WORKDIR /tmp/frama-c-20.0-Calcium/
 

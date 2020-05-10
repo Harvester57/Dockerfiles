@@ -1,4 +1,4 @@
-FROM ubuntu:19.10
+FROM ubuntu:20.04
 
 LABEL maintainer "florian.stosse@safrangroup.com"
 LABEL lastupdate "29-03-2020"
