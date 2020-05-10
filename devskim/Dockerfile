@@ -6,6 +6,7 @@ LABEL author "Florian Stosse"
 LABEL description "DevSkim tool v0.4.119 using Ubuntu 19.10 base image"
 LABEL license "MIT license"
 
+# Cf. https://github.com/microsoft/DevSkim/releases
 COPY DevSkim_Linux /usr/devskim/
 
 RUN \
