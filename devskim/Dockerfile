@@ -11,5 +11,5 @@ COPY DevSkim_Linux /usr/devskim/
 
 RUN \
   apt update && \
-  apt install libicu63 -y && \
+  apt install libicu66 -y && \
   ln -s /usr/devskim/devskim /bin/devskim
