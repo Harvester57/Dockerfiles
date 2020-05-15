@@ -24,8 +24,8 @@ COPY --from=builder /tmp/frama-c-20.0-Calcium/ /tmp/frama-c-20.0-Calcium/
 WORKDIR /tmp/frama-c-20.0-Calcium/
 
 RUN \
-    apt update && \
-    apt install ocaml-findlib make libocamlgraph-ocaml-dev libzarith-ocaml libyojson-ocaml libwhy3-ocaml-dev -y && \
-    make install && \
-    rm -rf /tmp/frama-c-20.0-Calcium/ && \
-    apt-get clean
+  apt update && \
+  apt install ocaml-findlib make libocamlgraph-ocaml-dev libzarith-ocaml libyojson-ocaml libwhy3-ocaml-dev -y && \
+  make install && \
+  rm -rf /tmp/frama-c-20.0-Calcium/ && \
+  apt-get clean
