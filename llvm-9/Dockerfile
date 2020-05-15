@@ -11,11 +11,10 @@ RUN \
   # Needed to import the LLVM repo key and handle the HTTPS cert
   apt install gnupg2 ca-certificates -y
 
-ADD https://apt.llvm.org/llvm-snapshot.gpg.key /tmp
 ADD llvm.list /etc/apt/sources.list.d
 
 RUN \
-  apt-key add /tmp/llvm-snapshot.gpg.key && \
+  apt-key adv --fetch-keys https://apt.llvm.org/llvm-snapshot.gpg.key && \
   apt update && \
   apt install clang-9 lldb-9 lld-9 -y && \
   # Try to regain some space in the final image, and clean temporary files
