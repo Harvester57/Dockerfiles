@@ -7,7 +7,7 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {},
     ".NETCoreApp,Version=v3.1/linux-x64": {
-      "devskim/0.4.136": {
+      "devskim/0.4.142": {
         "dependencies": {
           "Microsoft.CST.DevSkim": "0.0.0",
           "Microsoft.Extensions.CommandLineUtils": "1.1.1",
@@ -1670,7 +1670,7 @@
     }
   },
   "libraries": {
-    "devskim/0.4.136": {
+    "devskim/0.4.142": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
