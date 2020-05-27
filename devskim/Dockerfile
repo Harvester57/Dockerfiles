@@ -10,6 +10,7 @@ LABEL license "MIT license"
 COPY DevSkim_Linux /usr/devskim/
 
 RUN \
-  apt update && \
-  apt install libicu66 -y && \
-  ln -s /usr/devskim/devskim /bin/devskim
+  apt-get update && \
+  apt-get install libicu66 -y --no-install-recommends && \
+  ln -s /usr/devskim/devskim /bin/devskim && \
+  rm -rf /var/lib/apt/lists/*
