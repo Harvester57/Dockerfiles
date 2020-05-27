@@ -10,4 +10,4 @@ RUN \
   opam update && \
   opam install depext && \
   opam depext frama-c && \
-  opam install frama-c
+  opam install frama-c.20.0
