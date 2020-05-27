@@ -16,4 +16,4 @@ RUN \
   /tmp/cmake-install.sh --skip-license --prefix=/usr/bin/cmake && \
   rm /tmp/cmake-install.sh
 
-ENV PATH="/usr/bin/cmake/bin:${PATH}"
+ENV PATH="/usr/bin/cmake/bin:${PATH}"  
