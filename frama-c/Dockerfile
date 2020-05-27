@@ -7,9 +7,9 @@ LABEL description "Ubuntu 20.04 image, with Frama-C Calcium (20.0)"
 LABEL license "MIT license"
 
 RUN sed -i 's/# deb-src/deb-src/g' /etc/apt/sources.list
-RUN apt update
+RUN apt-get update
 RUN apt-get build-dep frama-c -y
-RUN apt install wget libyojson-ocaml-dev libwhy3-ocaml-dev -y
+RUN apt-get install wget libyojson-ocaml-dev libwhy3-ocaml-dev -y
 
 WORKDIR /tmp
 RUN wget https://frama-c.com/download/frama-c-20.0-Calcium.tar.gz
@@ -24,8 +24,8 @@ COPY --from=builder /tmp/frama-c-20.0-Calcium/ /tmp/frama-c-20.0-Calcium/
 WORKDIR /tmp/frama-c-20.0-Calcium/
 
 RUN \
-  apt update && \
-  apt install ocaml-findlib make libocamlgraph-ocaml-dev libzarith-ocaml libyojson-ocaml libwhy3-ocaml-dev -y && \
+  apt-get update && \
+  apt-get install ocaml-findlib make libocamlgraph-ocaml-dev libzarith-ocaml libyojson-ocaml libwhy3-ocaml-dev -y && \
   make install && \
   rm -rf /tmp/frama-c-20.0-Calcium/ && \
   apt-get clean
