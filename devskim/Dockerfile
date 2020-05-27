@@ -13,4 +13,5 @@ RUN \
   apt-get update && \
   apt-get install libicu66 -y --no-install-recommends && \
   ln -s /usr/devskim/devskim /bin/devskim && \
+  apt-get clean && \
   rm -rf /var/lib/apt/lists/*
