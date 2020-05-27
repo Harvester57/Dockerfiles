@@ -21,6 +21,6 @@ COPY --from=builder /tmp/binary /usr/share/binskim
 RUN \
   ln -s /usr/share/binskim/BinSkim /usr/bin/binskim && \
   apt-get update && \
-  apt-get install -y icu-devtools libunwind8 && \
+  apt-get install -y icu-devtools libunwind8 --no-install-recommends && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
