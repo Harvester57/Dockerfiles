@@ -1,4 +1,4 @@
-FROM alpine:3.11 AS builder
+FROM alpine:3.12 AS builder
 
 LABEL maintainer "florian.stosse@safrangroup.com"
 LABEL lastupdate "10-05-2020"
