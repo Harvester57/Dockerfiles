@@ -7,11 +7,11 @@
   "targets": {
     ".NETCoreApp,Version=v3.1": {},
     ".NETCoreApp,Version=v3.1/linux-x64": {
-      "devskim/0.4.142": {
+      "devskim/0.4.144": {
         "dependencies": {
           "Microsoft.CST.DevSkim": "0.0.0",
           "Microsoft.Extensions.CommandLineUtils": "1.1.1",
-          "Nerdbank.GitVersioning": "3.0.50",
+          "Nerdbank.GitVersioning": "3.1.91",
           "Sarif.Sdk": "1.7.5",
           "runtimepack.Microsoft.NETCore.App.Runtime.linux-x64": "3.1.4"
         },
@@ -770,7 +770,7 @@
           "runtime.unix.Microsoft.Win32.Primitives": "4.3.0"
         }
       },
-      "Nerdbank.GitVersioning/3.0.50": {},
+      "Nerdbank.GitVersioning/3.1.91": {},
       "NETStandard.Library/1.6.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -1670,7 +1670,7 @@
     }
   },
   "libraries": {
-    "devskim/0.4.142": {
+    "devskim/0.4.144": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1715,12 +1715,12 @@
       "path": "microsoft.win32.primitives/4.3.0",
       "hashPath": "microsoft.win32.primitives.4.3.0.nupkg.sha512"
     },
-    "Nerdbank.GitVersioning/3.0.50": {
+    "Nerdbank.GitVersioning/3.1.91": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jDbjKVHHhLBRjvRw+nDs8d/g8hRt7YUb1LHKEt3cR52SpnZfxf5Q7NGNxmnmeYxoT8ecAW44P4wciXz3yPlubA==",
-      "path": "nerdbank.gitversioning/3.0.50",
-      "hashPath": "nerdbank.gitversioning.3.0.50.nupkg.sha512"
+      "sha512": "sha512-eQI9TrHjxDtM4eUtl8zCAT5DGtQgZ6mpRd/qkHBEWUeLK/cn1wXnTdJ/6ffs5tlFDP1mEmGHc//wUzFdfr4Eiw==",
+      "path": "nerdbank.gitversioning/3.1.91",
+      "hashPath": "nerdbank.gitversioning.3.1.91.nupkg.sha512"
     },
     "NETStandard.Library/1.6.1": {
       "type": "package",
