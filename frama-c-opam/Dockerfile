@@ -1,13 +1,13 @@
-FROM ocaml/opam2:4.10
+FROM ocaml/opam2:4.12
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "29-03-2020"
+LABEL lastupdate "08-06-2020"
 LABEL author "Florian Stosse"
-LABEL description "Opam2 v4.10 image, with Frama-C Calcium (20.0)"
+LABEL description "Opam2 v4.12 image, with Frama-C Calcium (20.0)"
 LABEL license "MIT license"
 
 RUN \
   opam update && \
-  opam install depext && \
+  sudo apt-get update && \
   opam depext frama-c && \
   opam install frama-c
