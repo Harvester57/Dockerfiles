@@ -9,5 +9,6 @@ LABEL license "MIT license"
 RUN \
   opam update && \
   sudo apt-get update && \
-  opam depext frama-c && \
-  opam install frama-c
+  opam depext --yes --noninteractive --install frama-c.20.0 && \
+  eval $(opam config env) && \
+  why3 config --detect
