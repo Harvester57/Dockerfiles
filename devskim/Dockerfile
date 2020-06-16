@@ -1,15 +1,13 @@
-FROM ubuntu:20.04
+FROM mcr.microsoft.com/dotnet/core/runtime:3.1-alpine
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "08-06-2020"
+LABEL lastupdate "16-06-2020"
 LABEL author "Florian Stosse"
-LABEL description "DevSkim tool v0.4.144 using Ubuntu 20.04 base image"
+LABEL description "DevSkim tool v0.4.152 using .NET Core Runtime Alpine image"
 LABEL license "MIT license"
 
+WORKDIR /app
 # Cf. https://github.com/microsoft/DevSkim/releases
-COPY DevSkim_Linux /usr/devskim/
+COPY DevSkim/ .
 
-RUN \
-  apt update && \
-  apt install libicu66 -y && \
-  ln -s /usr/devskim/devskim /bin/devskim
+ENTRYPOINT ["dotnet", "devskim.dll"]
