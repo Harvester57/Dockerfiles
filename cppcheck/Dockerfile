@@ -24,3 +24,4 @@ RUN	\
 FROM alpine:3.12
 
 COPY --from=builder /usr/bin/cppcheck /usr/bin/cppcheck
+ENTRYPOINT ["cppcheck"]
