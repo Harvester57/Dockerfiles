@@ -17,7 +17,7 @@ RUN	git clone --branch 2.1 https://github.com/danmar/cppcheck.git --depth 1
 
 WORKDIR /usr/src/cppcheck
 
-RUN	\
+RUN \
   make install FILESDIR=/cfg HAVE_RULES=yes CXXFLAGS="-O3 -DNDEBUG --static" -j2 && \
   strip /usr/bin/cppcheck
 
