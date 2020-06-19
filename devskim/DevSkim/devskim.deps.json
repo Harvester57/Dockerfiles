@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "devskim/0.4.153": {
+      "devskim/0.4.157": {
         "dependencies": {
           "Microsoft.CST.DevSkim": "0.0.0",
           "Microsoft.CST.RecursiveExtractor": "0.1.203",
@@ -1042,7 +1042,7 @@
     }
   },
   "libraries": {
-    "devskim/0.4.153": {
+    "devskim/0.4.157": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
