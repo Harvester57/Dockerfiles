@@ -1,12 +1,13 @@
 FROM gcc:10.1
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "27-05-2020"
+LABEL lastupdate "15-07-2020"
 LABEL author "Florian Stosse"
-LABEL description "CMake 3.17.2 using GCC 10.1 base image"
+LABEL description "CMake 3.17.3 using GCC 10.1 base image"
 LABEL license "MIT license"
 
-ARG CMAKE_VERSION=3.17.2
+# Cf. https://github.com/Kitware/CMake/releases
+ARG CMAKE_VERSION=3.17.3
 
 RUN \
   wget https://github.com/Kitware/CMake/releases/download/v${CMAKE_VERSION}/cmake-${CMAKE_VERSION}-Linux-x86_64.sh \
