@@ -6,13 +6,13 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "devskim/0.4.157": {
+      "devskim/0.4.165": {
         "dependencies": {
           "Microsoft.CST.DevSkim": "0.0.0",
-          "Microsoft.CST.RecursiveExtractor": "0.1.203",
+          "Microsoft.CST.RecursiveExtractor": "0.1.213",
           "Microsoft.Extensions.CommandLineUtils": "1.1.1",
           "Nerdbank.GitVersioning": "3.1.91",
-          "Sarif.Sdk": "1.7.5"
+          "Sarif.Sdk": "2.3.0"
         },
         "runtime": {
           "devskim.dll": {}
@@ -175,8 +175,7 @@
           }
         }
       },
-      "Microsoft.CodeAnalysis.BinSkim/1.4.4": {},
-      "Microsoft.CST.RecursiveExtractor/0.1.203": {
+      "Microsoft.CST.RecursiveExtractor/0.1.213": {
         "dependencies": {
           "DiscUtils.Btrfs": "0.15.1-ci0002",
           "DiscUtils.Core": "0.15.1-ci0002",
@@ -197,7 +196,7 @@
         "runtime": {
           "lib/netcoreapp3.1/RecursiveExtractor.dll": {
             "assemblyVersion": "0.1.0.0",
-            "fileVersion": "0.1.203.53242"
+            "fileVersion": "0.1.213.41954"
           }
         }
       },
@@ -334,16 +333,15 @@
       "runtime.ubuntu.14.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.04-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.ubuntu.16.10-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
-      "Sarif.Sdk/1.7.5": {
+      "Sarif.Sdk/2.3.0": {
         "dependencies": {
-          "Microsoft.CodeAnalysis.BinSkim": "1.4.4",
           "Newtonsoft.Json": "12.0.3",
-          "System.Collections.Immutable": "1.4.0"
+          "System.Collections.Immutable": "1.5.0"
         },
         "runtime": {
-          "lib/netcoreapp2.0/Sarif.dll": {
-            "assemblyVersion": "1.7.5.0",
-            "fileVersion": "1.7.5.0"
+          "lib/netstandard2.0/Sarif.dll": {
+            "assemblyVersion": "2.3.0.0",
+            "fileVersion": "2.3.0.0"
           }
         }
       },
@@ -401,7 +399,7 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
-      "System.Collections.Immutable/1.4.0": {},
+      "System.Collections.Immutable/1.5.0": {},
       "System.Console/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.1",
@@ -1042,7 +1040,7 @@
     }
   },
   "libraries": {
-    "devskim/0.4.157": {
+    "devskim/0.4.165": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1145,19 +1143,12 @@
       "path": "lzo.net/0.0.3",
       "hashPath": "lzo.net.0.0.3.nupkg.sha512"
     },
-    "Microsoft.CodeAnalysis.BinSkim/1.4.4": {
+    "Microsoft.CST.RecursiveExtractor/0.1.213": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-PGJzEHHBsipd7yYUQVJazZZbjylxi1PMC+fnhUBmEbL9d33T8yo2ZMII7akeTFw+XdJZjvwPgqTDA833fM5n4w==",
-      "path": "microsoft.codeanalysis.binskim/1.4.4",
-      "hashPath": "microsoft.codeanalysis.binskim.1.4.4.nupkg.sha512"
-    },
-    "Microsoft.CST.RecursiveExtractor/0.1.203": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-5gua1kz9OEftXTtEOYZMRDB9AD/tDO0zjHoKeVI2OfK+DY/K4EME5Wuc1KoP1SO4DkpIEeVplGTP1SaczEPR5g==",
-      "path": "microsoft.cst.recursiveextractor/0.1.203",
-      "hashPath": "microsoft.cst.recursiveextractor.0.1.203.nupkg.sha512"
+      "sha512": "sha512-n/uTmpkVPwFNrq2QrY1uiksro/anQ2tEqwOTDFvGdQCZc12Sl5aFJT3okc1LFK2Ij8RuDuFVT8/KG8auR641rQ==",
+      "path": "microsoft.cst.recursiveextractor/0.1.213",
+      "hashPath": "microsoft.cst.recursiveextractor.0.1.213.nupkg.sha512"
     },
     "Microsoft.Extensions.CommandLineUtils/1.1.1": {
       "type": "package",
@@ -1327,12 +1318,12 @@
       "path": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl/4.3.0",
       "hashPath": "runtime.ubuntu.16.10-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512"
     },
-    "Sarif.Sdk/1.7.5": {
+    "Sarif.Sdk/2.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Z1E3A82QtXvwWFVtijrwkP+pANBa5dsQZlQmWy+qjtcDcSnUbXw++DvuiCXKBXjvFkTIjtJ6XInOfDS/bbRb2A==",
-      "path": "sarif.sdk/1.7.5",
-      "hashPath": "sarif.sdk.1.7.5.nupkg.sha512"
+      "sha512": "sha512-2muzohVW4Dl9tsgDwuEbrpA8koIbcoKKMDlYp1kgdINRfIIpquHdocsNz2aahFGB7NJa3Qj2Skl6XJCQdg7uxQ==",
+      "path": "sarif.sdk/2.3.0",
+      "hashPath": "sarif.sdk.2.3.0.nupkg.sha512"
     },
     "SharpCompress/0.25.1": {
       "type": "package",
@@ -1376,12 +1367,12 @@
       "path": "system.collections.concurrent/4.3.0",
       "hashPath": "system.collections.concurrent.4.3.0.nupkg.sha512"
     },
-    "System.Collections.Immutable/1.4.0": {
+    "System.Collections.Immutable/1.5.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-71hw5RUJRu5+q/geUY69gpXD8Upd12cH+F3MwpXV2zle7Bqqkrmc1JblOTuvUcgmdnUtQvBlV5e1d6RH+H2lvA==",
-      "path": "system.collections.immutable/1.4.0",
-      "hashPath": "system.collections.immutable.1.4.0.nupkg.sha512"
+      "sha512": "sha512-EXKiDFsChZW0RjrZ4FYHu9aW6+P4MCgEDCklsVseRfhoO0F+dXeMSsMRAlVXIo06kGJ/zv+2w1a2uc2+kxxSaQ==",
+      "path": "system.collections.immutable/1.5.0",
+      "hashPath": "system.collections.immutable.1.5.0.nupkg.sha512"
     },
     "System.Console/4.3.0": {
       "type": "package",
