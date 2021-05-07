@@ -7,4 +7,4 @@ LABEL description "Cpplint v1.5.2, built using Python v3.9 Alpine-based image"
 LABEL license "MIT license"
 
 # Cf. https://pypi.org/project/cpplint/
-RUN pip3 install cpplint==1.5.4
+RUN pip3 install --trusted-host files.pythonhosted.org cpplint==1.5.4
