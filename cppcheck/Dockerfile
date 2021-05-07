@@ -1,7 +1,8 @@
+# Source: https://hub.docker.com/_/alpine/
 FROM alpine:3.13.5 AS builder
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "06-05-2020"
+LABEL lastupdate "06-05-2021"
 LABEL author "Florian Stosse"
 LABEL description "CppCheck v2.4.1, built using latest Alpine image"
 LABEL license "MIT license"
