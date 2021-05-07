@@ -24,6 +24,8 @@ RUN \
   --add Microsoft.VisualStudio.Workload.VCTools --includeRecommended \
   --add Microsoft.VisualStudio.Component.VC.Llvm.Clang \
   --add Microsoft.VisualStudio.Component.VC.Llvm.ClangToolset \
+  --add Microsoft.VisualStudio.Component.VC.ATLMFC \
+  --add Microsoft.VisualStudio.Component.VC.CLI.Support \
   --installPath C:/BuildTools
 
 FROM mcr.microsoft.com/windows/servercore:1809-KB5001342-amd64
