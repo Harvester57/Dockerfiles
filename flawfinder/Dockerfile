@@ -7,4 +7,4 @@ LABEL description "FlawFinder v2.0.15, built using Python v3.9 Alpine-based imag
 LABEL license "MIT license"
 
 # Cf. https://pypi.org/project/flawfinder/
-RUN pip3 install flawfinder==2.0.15
+RUN pip3 install --trusted-host files.pythonhosted.org flawfinder==2.0.15
