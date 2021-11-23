@@ -1,3 +1,4 @@
+# Cf. https://hub.docker.com/_/python/
 FROM python:3.9.5-alpine3.13
 
 LABEL maintainer "florian.stosse@safrangroup.com"
