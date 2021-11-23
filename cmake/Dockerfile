@@ -4,7 +4,7 @@ FROM gcc:11.2.0
 LABEL maintainer "florian.stosse@safrangroup.com"
 LABEL lastupdate "23-11-2021"
 LABEL author "Florian Stosse"
-LABEL description "CMake 3.20.2 using GCC 11.2 base image"
+LABEL description "CMake 3.22.0 using GCC 11.2 base image"
 LABEL license "MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
