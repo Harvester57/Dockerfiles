@@ -1,19 +1,23 @@
-# Source: https://hub.docker.com/_/microsoft-dotnet-core-sdk/
-FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS builder
+# Source: https://hub.docker.com/_/microsoft-dotnet-sdk
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS builder
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "27-05-2020"
+LABEL lastupdate "23-11-2021"
 LABEL author "Florian Stosse"
-LABEL description "Ubuntu 20.04 image, with BinSkim 1.6.0"
+LABEL description "Ubuntu 20.04 image, with BinSkim 1.7.5"
 LABEL license "MIT license"
 
 WORKDIR /tmp
-RUN git clone --depth 1 https://github.com/microsoft/binskim.git
+
+RUN apt-get update; apt-get upgrade -y; update-ca-certificates
+# Cf. https://github.com/microsoft/binskim/releases
+RUN git clone --depth 1 --branch v1.7.5 https://github.com/microsoft/binskim.git
 RUN \
   mkdir /tmp/binary && \
   dotnet publish --configuration Release --framework netcoreapp2.0 --runtime linux-x64 --output /tmp/binary /tmp/binskim/src/BinSkim.Driver/BinSkim.Driver.csproj && \
   chmod +x /tmp/binary/BinSkim
 
+# Source: https://hub.docker.com/_/ubuntu/
 FROM ubuntu:20.04
 
 COPY --from=builder /tmp/binary /usr/share/binskim
