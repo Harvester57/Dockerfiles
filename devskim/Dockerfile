@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/runtime:3.1-alpine
+FROM mcr.microsoft.com/dotnet/runtime:5.0-alpine3.14-amd64
 
 LABEL maintainer "florian.stosse@safrangroup.com"
 LABEL lastupdate "23-11-2020"
