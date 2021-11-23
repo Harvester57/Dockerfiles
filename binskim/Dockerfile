@@ -4,14 +4,14 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS builder
 LABEL maintainer "florian.stosse@safrangroup.com"
 LABEL lastupdate "23-11-2021"
 LABEL author "Florian Stosse"
-LABEL description "Ubuntu 20.04 image, with BinSkim 1.7.5"
+LABEL description "Ubuntu 20.04 image, with BinSkim v1.9.0-prerelease3"
 LABEL license "MIT license"
 
 WORKDIR /tmp
 
 RUN apt-get update; apt-get upgrade -y; update-ca-certificates
 # Cf. https://github.com/microsoft/binskim/releases
-RUN git clone --depth 1 --branch v1.7.5 https://github.com/microsoft/binskim.git
+RUN git clone --depth 1 --branch v1.9.0-prerelease3 https://github.com/microsoft/binskim.git
 RUN \
   mkdir /tmp/binary && \
   dotnet publish --configuration Release --framework netcoreapp2.0 --runtime linux-x64 --output /tmp/binary /tmp/binskim/src/BinSkim.Driver/BinSkim.Driver.csproj && \
