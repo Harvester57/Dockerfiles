@@ -1,10 +1,10 @@
 # Source: https://hub.docker.com/_/gcc/
-FROM gcc:11.1.0
+FROM gcc:11.2.0
 
 LABEL maintainer "florian.stosse@safrangroup.com"
-LABEL lastupdate "07-05-2021"
+LABEL lastupdate "23-11-2021"
 LABEL author "Florian Stosse"
-LABEL description "CMake 3.20.2 using GCC 11.1 base image"
+LABEL description "CMake 3.20.2 using GCC 11.2 base image"
 LABEL license "MIT license"
 
 # Cf. https://github.com/Kitware/CMake/releases
